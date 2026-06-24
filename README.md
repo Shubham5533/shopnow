@@ -1,3 +1,8 @@
+## Live Demo
+- **Frontend:** https://shopnow-navy.vercel.app
+- **Backend API:** https://shopnow-0nag.onrender.com
+
+
 # ShopNow - Full Stack E-Commerce Application
 
 A complete MERN stack e-commerce application with product catalog, cart, checkout, order tracking, and full admin panel.
