@@ -3,13 +3,38 @@ import { useAuth } from '../../context/AuthContext';
 import { useCart } from '../../context/CartContext';
 import { FiShoppingCart, FiUser, FiLogOut, FiShield } from 'react-icons/fi';
 import './Navbar.css';
+import { useState } from 'react';
 
 export default function Navbar() {
+  const [showBanner, setShowBanner] = useState(true);
   const { user, logout } = useAuth();
   const { cartCount } = useCart();
   const navigate = useNavigate();
 
   return (
+
+    <>
+      {showBanner && (
+        <div style={{
+          background: '#fef3c7',
+          borderBottom: '1px solid #f59e0b',
+          padding: '0.5rem 1rem',
+          textAlign: 'center',
+          fontSize: '0.85rem',
+          color: '#92400e',
+          display: 'flex',
+          justifyContent: 'center',
+          alignItems: 'center',
+          gap: '0.5rem'
+        }}>
+          First load may take 30-60 seconds — backend is waking up on free tier
+          <button onClick={() => setShowBanner(false)}
+            style={{ background: 'none', fontSize: '1rem', color: '#92400e', marginLeft: '0.5rem' }}>
+            ✕
+          </button>
+        </div>
+      )}
+
     <nav className="navbar">
       <div className="container nav-inner">
         <Link to="/" className="logo">
@@ -52,5 +77,6 @@ export default function Navbar() {
         </div>
       </div>
     </nav>
+    </>
   );
 }
