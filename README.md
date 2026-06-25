@@ -7,6 +7,19 @@
 
 A complete MERN stack e-commerce application with product catalog, cart, checkout, order tracking, and full admin panel.
 
+
+## 📸 Screenshots
+
+### Home Page
+![Home](screenshots/home.png)
+
+### Products
+![Products](screenshots/products.png)
+
+### Admin Dashboard
+![Admin](screenshots/admin.png)
+
+
 ## Tech Stack
 - **Frontend:** React 18 + Vite + React Router v6
 - **Backend:** Node.js + Express.js
