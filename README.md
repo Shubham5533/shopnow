@@ -43,7 +43,62 @@ A complete MERN stack e-commerce application with product catalog, cart, checkou
 - Order management with status updates
 - User management (delete, promote/demote admin)
 
-
+ 
+## 🚀 Local Setup
+ 
+### 1. Clone the repository
+```bash
+git clone https://github.com/Shubham5533/shopnow.git
+cd shopnow
+```
+ 
+### 2. Setup Backend
+```bash
+cd backend
+cp .env.example .env
+# Add your MongoDB URI and JWT secret in .env
+npm install
+```
+ 
+### 3. Setup Frontend
+```bash
+cd ../frontend
+cp .env.example .env
+# Set VITE_API_URL=http://localhost:5000/api
+npm install
+```
+ 
+### 4. Seed the Database
+```bash
+cd ../backend
+node seed.js
+```
+ 
+This creates:
+- Admin: `admin@shopnow.com` / `admin123`
+- User: `user@shopnow.com` / `user123`
+- 8 sample products
+### 5. Run Both Servers
+```bash
+# Terminal 1 - Backend
+cd backend && npm run dev
+ 
+# Terminal 2 - Frontend
+cd frontend && npm run dev
+```
+ 
+App runs at: http://localhost:5173
+ 
+---
+ 
+## 🔑 Demo Credentials
+ 
+| Role | Email | Password |
+|------|-------|----------|
+| Admin | admin@shopnow.com | admin123 |
+| User | user@shopnow.com | user123 |
+ 
+---
 
 ## API Endpoints Summary
 
@@ -120,3 +175,10 @@ shopnow/
     │   └── main.jsx
     └── vite.config.js
 ```
+
+ 
+## 👨‍💻 Author
+ 
+**Shubham**
+- GitHub: [@Shubham5533](https://github.com/Shubham5533)
+- Live: [shopnow-navy.vercel.app](https://shopnow-navy.vercel.app)
